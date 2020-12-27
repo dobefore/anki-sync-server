@@ -24,3 +24,7 @@ notebooks:
 %:
 	@test -f scripts/${*}.sh
 	@${SHELL} scripts/${*}.sh
+
+.PHONY: release #: Tag and deploy to PyPI.
+release:
+	@${SHELL} scripts/release.sh
